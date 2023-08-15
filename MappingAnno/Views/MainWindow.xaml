@@ -3,13 +3,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:MappingAnno" xmlns:hc="https://handyorg.github.io/handycontrol"
     xmlns:Views="clr-namespace:MappingAnno.Views" x:Class="MappingAnno.MainWindow"
-    mc:Ignorable="d" Title="{Binding Title}" Height="450" Width="800">
+    mc:Ignorable="d" Title="{Binding Title}" Height="600" Width="800">
     <Grid x:Name="root">
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition />
-            <RowDefinition Height="30" />
+            <!--<RowDefinition />-->
+            <RowDefinition Height="0" />
         </Grid.RowDefinitions>
+        <hc:TransitioningContentControl>
+            <Grid x:Name="mainContent" />
+        </hc:TransitioningContentControl>
         <Views:StatusMap Grid.Row="2" />
     </Grid>
 </hc:Window>

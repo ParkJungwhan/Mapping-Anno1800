@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MVVMHelper
@@ -10,6 +11,7 @@ namespace MVVMHelper
         public static T GetDIService<T>()
         {
             var diService = Services.GetService<T>();
+            Debug.Assert(diService != null);
 
             return diService;
         }
